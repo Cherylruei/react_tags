@@ -3,7 +3,7 @@ import './Container.scss'
 import { useRef, useState, useEffect } from "react";
 import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
-import { debounce } from "../utility";
+import { debounce } from "../utility/utility";
 
 const Container = ({ title, data, transportation,isShipActive, setIsShipActive, isTrainActive, setIsTrainActive}) => {
     // 監測 overflow

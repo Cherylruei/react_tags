@@ -4,7 +4,7 @@ import {ReactComponent as BusIcon} from '../assets/icon1.svg'
 import {ReactComponent as ShipIcon}  from '../assets/icon2.svg'
 import {ReactComponent as TrainIcon}  from '../assets/icon3.svg'
 
-const Tag = ({text, icon, transportation, isShipActive, setIsShipActive, isTrainActive, setIsTrainActive}) => {
+const Tag = ({text, icon, isShipActive, setIsShipActive, isTrainActive, setIsTrainActive}) => {
  const [isTagActive, setIsTagActive] = useState(false)
 
  const handleTagActive = () => {
