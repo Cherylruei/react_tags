@@ -1,0 +1,39 @@
+.tag {
+    padding: 0.2rem 1rem;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    text-align: center;
+    overflow: hidden;
+    margin: 0.4rem 0.2rem 0;
+    width: auto;
+    height: 1.2rem;
+    line-height: 1.4rem;
+    cursor: pointer;
+
+    &:hover {
+        background: #f13d48;
+        color: #ffffff;
+        path {
+           fill: #ffffff;
+        }
+    }
+}
+
+
+.icon  {
+    width: 15px;
+    height: auto;
+    padding-right: 0.2rem;
+
+}
+
+
+.active {
+    background: #f13d48;
+    color: #ffffff;
+    path {
+       fill: #ffffff;
+    }
+}
+
+
