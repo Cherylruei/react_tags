@@ -1,45 +1,25 @@
-import { useState } from 'react'
-import './Tag.scss'
-import {ReactComponent as BusIcon} from '../assets/icon1.svg'
-import {ReactComponent as ShipIcon}  from '../assets/icon2.svg'
-import {ReactComponent as TrainIcon}  from '../assets/icon3.svg'
+import { useState } from 'react';
+import './Tag.scss';
+import { TripIcon } from '../constants/constant';
 
-const Tag = ({text, icon, isShipActive, setIsShipActive, isTrainActive, setIsTrainActive}) => {
- const [isTagActive, setIsTagActive] = useState(false)
+const Tag = ({ text, typeCode, hasTagClick, transportation }) => {
+  const [isTagActive, setIsTagActive] = useState(false);
 
- const handleTagActive = () => {
-   setIsTagActive(() => !isTagActive)
-   
-   if(icon ==="01"){
-    setIsShipActive(() => !isShipActive)
-   }
-   if(icon==="03"){
-    setIsTrainActive(() => !isTrainActive)
-   }
- }
+  const handleClick = () => {
+    // 回傳點擊的 typeCode
+    hasTagClick(typeCode);
+    // 設置 tag active 樣式
+    setIsTagActive(!isTagActive);
+  };
 
   return (
     <>
-      <div className={`tag ${isTagActive && "active"}`} onClick={handleTagActive}>
-        {icon && <TripIcon icon={icon}/>}
-      {text}</div>
+      <div className={`tag ${isTagActive && 'active'}`} onClick={handleClick}>
+        {transportation && <TripIcon typeCode={typeCode} />}
+        {text}
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Tag
-
-
-function TripIcon({icon}){
-  switch(icon){
-    case "01":
-      return <ShipIcon className='icon'/>
-    case "02":
-      return  <BusIcon className='icon'/>
-      case "03":
-      return <TrainIcon className='icon'/>
-     default:
-      return null 
-  }
-
-}
+export default Tag;

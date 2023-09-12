@@ -1,13 +1,12 @@
 @mixin flexrow {
-	display: flex;
-	flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .container {
   @include flexrow;
-  margin:0.5rem;
+  margin: 0.5rem;
   align-items: start;
-  justify-content: space-between;
 }
 
 .tagsContainer {
@@ -20,8 +19,8 @@
 }
 
 div .display {
-    overflow: visible;
-    height: auto;
+  overflow: visible;
+  height: auto;
 }
 
 .title {
@@ -31,11 +30,11 @@ div .display {
 
 .children {
   @include flexrow;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 
 .content {
-  color:rgb(16, 198, 189);
+  color: rgb(16, 198, 189);
   font-size: 16px;
   text-wrap: nowrap;
   padding: 0 12px;
